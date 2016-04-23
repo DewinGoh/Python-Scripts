@@ -129,9 +129,8 @@ def texasholdemplay(players):
     print gameriver
     return 0
 
-'''Outputs desired criteria'''
-def SimOutput(hands, criteria = 'pair'):
-    for hand in hands:
-        print 0
+#TODO: Implement Scoring Function
+
+texasholdemplay(Players)
 
 
