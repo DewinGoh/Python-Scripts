@@ -1,14 +1,16 @@
 #Game Simulation
 import random
 
+#Parameter input
 players = 13
 picking_percentage = 10.0/13
 iterations = 50000
 
+#Sets up playing field
 def boxes(players):
     game_arena = {}
     box_numbers = []
-    for number in range(1,players+1):
+    for number in xrange(1,players+1):
         box_numbers.append(number)
         
     for box in xrange(1,players+1):
@@ -64,6 +66,7 @@ def strategy3(players,game_arena,percentage):
             return False       
     return True
 
+#Obtains success rate of strategies
 def success_rate(players,picking_percentage,iterations):
     success = 0
     for i in xrange(iterations):
@@ -74,4 +77,5 @@ def success_rate(players,picking_percentage,iterations):
     print str(percentage) + '%'
     return 0
 
+#Function Call
 success_rate(players,picking_percentage,iterations)
